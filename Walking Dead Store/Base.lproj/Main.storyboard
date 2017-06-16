@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Walking_Dead_Store" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shelf" translatesAutoresizingMaskIntoConstraints="NO" id="rca-tu-a3J">
+                                <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fgB-Ej-3Ug"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fuC-SC-BGL">
+                                <rect key="frame" x="67" y="20" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="RUm-FW-dfN"/>
+                                    <constraint firstAttribute="width" constant="240" id="o4V-rO-Pck"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubb-nm-jGr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-s5-Seb">
+                                        <rect key="frame" x="52" y="239" width="271" height="428"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="271" id="PG1-TZ-cFS"/>
+                                            <constraint firstAttribute="height" constant="428" id="e68-Ib-0Pj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="KQC-s5-Seb" firstAttribute="top" secondItem="Ubb-nm-jGr" secondAttribute="top" constant="239" id="7dc-7R-ffJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="KQC-s5-Seb" secondAttribute="bottom" id="db7-eZ-Dnk"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQC-s5-Seb" secondAttribute="trailing" constant="52" id="hCw-Xg-ZrN"/>
+                                    <constraint firstItem="KQC-s5-Seb" firstAttribute="centerX" secondItem="Ubb-nm-jGr" secondAttribute="centerX" id="i0v-I3-Gfn"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ubb-nm-jGr" secondAttribute="trailing" id="6VH-nG-L8f"/>
+                            <constraint firstAttribute="trailing" secondItem="rca-tu-a3J" secondAttribute="trailing" id="KWJ-Ut-3yx"/>
+                            <constraint firstItem="rca-tu-a3J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PoG-hQ-fqa"/>
+                            <constraint firstItem="fuC-SC-BGL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QNx-yi-NKw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rca-tu-a3J" secondAttribute="bottom" constant="20" id="UUJ-Fa-Gw4"/>
+                            <constraint firstItem="Ubb-nm-jGr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Upf-m6-e0g"/>
+                            <constraint firstItem="Ubb-nm-jGr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="anN-f9-5yZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ubb-nm-jGr" secondAttribute="bottom" id="gmb-zn-2Ur"/>
+                            <constraint firstItem="fuC-SC-BGL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="znU-GO-hFe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="368" height="610"/>
+        <image name="logo" width="732" height="340"/>
+        <image name="shelf" width="865" height="114"/>
+    </resources>
 </document>
