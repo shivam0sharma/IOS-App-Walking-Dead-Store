@@ -36,21 +36,6 @@
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubb-nm-jGr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-s5-Seb">
-                                        <rect key="frame" x="52" y="239" width="271" height="428"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="271" id="PG1-TZ-cFS"/>
-                                            <constraint firstAttribute="height" constant="428" id="e68-Ib-0Pj"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="KQC-s5-Seb" firstAttribute="top" secondItem="Ubb-nm-jGr" secondAttribute="top" constant="239" id="7dc-7R-ffJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="KQC-s5-Seb" secondAttribute="bottom" id="db7-eZ-Dnk"/>
-                                    <constraint firstAttribute="trailing" secondItem="KQC-s5-Seb" secondAttribute="trailing" constant="52" id="hCw-Xg-ZrN"/>
-                                    <constraint firstItem="KQC-s5-Seb" firstAttribute="centerX" secondItem="Ubb-nm-jGr" secondAttribute="centerX" id="i0v-I3-Gfn"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,6 +51,9 @@
                             <constraint firstItem="fuC-SC-BGL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="znU-GO-hFe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Ubb-nm-jGr" id="yQ8-hy-vji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +61,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="368" height="610"/>
         <image name="logo" width="732" height="340"/>
         <image name="shelf" width="865" height="114"/>
     </resources>
